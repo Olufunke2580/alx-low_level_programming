@@ -14,25 +14,27 @@ int main(void)
 	{
 		while (j <= '8')
 		{
-			if (i < j && j < K)
+			while (k <= '9')
 			{
-				putchar(i);
-				putchar(j);
-				putchar(k);
-				if (!(i == '7' && j == '8' && k == '9'))
+				if (i < j && j < K)
 				{
-					putchar(',');
-					putchar(' ');
+					putchar(i);
+					putchar(j);
+					putchar(k);
+					if (!(i == '7' && j == '8' && k == '9'))
+					{
+						putchar(',');
+						putchar(' ');
+					}
 				}
+				k++;
 			}
-			k++;
+			k = '0';
+			j++;
 		}
-		k = '0';
-		j++;
+		j = '0';
+		i++;
 	}
-	j = '0';
-	i++;
-}
-putchar('\n');
-return (0);
+	putchar('\n');
+	return (0);
 }

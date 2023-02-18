@@ -6,9 +6,9 @@
  */
 int main(void)
 {
-	char c = 'a';
+	char c = 'b';
 
-	while (c <= 'z')
+	while (c <= 'd')
 	{
 		putchar(c);
 		c++;

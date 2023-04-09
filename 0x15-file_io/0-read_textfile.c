@@ -4,10 +4,9 @@
 
 
 /**
- * main - c
+ * read_textfile - to read the printed file
  * @filename: the name of the file
  * @letters: the numbers of letters
- *
  * Return: Always 0
  */
 

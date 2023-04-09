@@ -4,9 +4,11 @@
 
 /**
  * main - check the code
- *
+ * @ac: in ac
+ * @av: int av
  * Return: Always 0.
  */
+
 int main(int ac, char **av)
 {
 	ssize_t n;

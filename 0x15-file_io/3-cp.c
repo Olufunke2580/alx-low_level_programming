@@ -70,7 +70,7 @@ int main(int argc, char *argv[])
 	fun = create_fun(argv[2]);
 	from = open(argv[1], O_RDONLY);
 	a = read(from, fun, 1024);
-	to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0064);
+	to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 
 	do {
 		if (from == -1 || a == -1)

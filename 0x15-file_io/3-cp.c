@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 char *create_fun(char *file);
-void close_file(int funk);
+void close_file(int fd);
 
 /**
  * create_fun - Allocates 1024 bytes for a buffer.
@@ -28,18 +28,18 @@ char *create_fun(char *file)
 
 /**
  * close_file - Closes file descriptors.
- * @funk: The file descriptor to be closed.
+ * @fd: The file descriptor to be closed.
  */
 
-void close_file(int funk)
+void close_file(int fd)
 {
 	int f;
 
-	f = close(funk);
+	f = close(fd);
 
 	if (f == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close funk %d/n", funk);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d/n", fd);
 		exit(100);
 	}
 }

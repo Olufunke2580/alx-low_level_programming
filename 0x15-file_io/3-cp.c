@@ -6,7 +6,7 @@ char *create_fun(char *file);
 void close_file(int funk);
 
 /**
- * create_buffer - Allocates 1024 bytes for a buffer.
+ * create_fun - Allocates 1024 bytes for a buffer.
  * @file: The name of the file buffer is storing chars for.
  *
  * Return: A pointer to the newly-allocated buffer.
@@ -20,7 +20,7 @@ char *create_fun(char *file)
 
 	if (fun == NULL)
 	{
-		dprintf(STDERR_FILENO, "Error: unable to write %s\n", file);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file);
 		exit(99);
 	}
 	return (fun);
@@ -39,7 +39,7 @@ void close_file(int funk)
 
 	if (f == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: unable to close funk %d/n", funk);
+		dprintf(STDERR_FILENO, "Error: Can't close funk %d/n", funk);
 		exit(100);
 	}
 }
@@ -75,7 +75,7 @@ int main(int argc, char *argv[])
 	do {
 		if (from == -1 || a == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: cant read from file %s\n", argv[1]);
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 			free(fun);
 			exit(98);
 		}
@@ -83,7 +83,7 @@ int main(int argc, char *argv[])
 		b = write(to, fun, a);
 		if (to == -1 || b == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: cant write to %s\n", argv[2]);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 			free(fun);
 			exit(99);
 		}
